@@ -26,7 +26,7 @@ function buildCard(p) {
   const chip = isUpcoming
     ? `<div class="chip upcoming">📦 In ${daysLeft(p.availableDate)}d</div>`
     : "";
-
+  // oh
   const overlay = isSold ? `<div class="overlay-sold"><span>Booked</span></div>` : "";
 
   const headsUp = isUpcoming && p.headsUp
