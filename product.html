@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusCart | Product</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="home.html" class="brand">
+      <img src="assets/rec-logo.jpeg" alt="REC logo">
+      <div>CampusCart<small>RAGHU ENGINEERING COLLEGE</small></div>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="home.html">🏠 Home</a>
+      <a href="sell.html">➕ Sell an Item</a>
+      <a href="wishlist.html">❤️ Wishlist <span class="badge-count" id="wish-count">0</span></a>
+      <a href="cart.html">🛒 Cart <span class="badge-count" id="cart-count">0</span></a>
+      <a href="account.html">👤 <span id="nav-username">Account</span></a>
+      <button onclick="logout()">🚪 Logout</button>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <p style="margin-bottom:14px;"><a href="home.html" class="btn btn-outline btn-sm">← Back to Marketplace</a></p>
+  <div id="product-container"></div>
+</main>
+
+<footer>CampusCart &middot; Built by students, for students of Raghu Engineering College</footer>
+
+<!-- purchase confirmation modal -->
+<div class="modal-overlay" id="confirm-modal">
+  <div class="modal-box">
+    <div class="emoji">🤝</div>
+    <h3>Confirm this purchase?</h3>
+    <p id="confirm-text"></p>
+    <div class="modal-actions">
+      <button class="btn btn-outline" id="cancel-buy">Cancel</button>
+      <button class="btn btn-primary" id="confirm-buy">Yes, Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="success-modal">
+  <div class="modal-box">
+    <div class="emoji">🎉</div>
+    <h3>Order Confirmed!</h3>
+    <p>Show this Product ID to the seller when you meet on campus to exchange the item.</p>
+    <div class="order-id" id="order-id-display"></div>
+    <div class="modal-actions">
+      <a href="account.html" class="btn btn-primary">Go to My Account</a>
+      <button class="btn btn-danger" id="modal-cancel-order">Cancel Order</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js?v=3"></script>
+<script src="js/product.js?v=3"></script>
+</body>
+</html>

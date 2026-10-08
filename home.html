@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusCart | Marketplace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="home.html" class="brand">
+      <img src="assets/rec-logo.jpeg" alt="REC logo">
+      <div>CampusCart<small>RAGHU ENGINEERING COLLEGE</small></div>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="home.html" class="active">🏠 Home</a>
+      <a href="sell.html">➕ Sell an Item</a>
+      <a href="wishlist.html">❤️ Wishlist <span class="badge-count" id="wish-count">0</span></a>
+      <a href="cart.html">🛒 Cart <span class="badge-count" id="cart-count">0</span></a>
+      <a href="account.html">👤 <span id="nav-username">Account</span></a>
+      <button onclick="logout()">🚪 Logout</button>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+
+  <div class="hero-banner">
+    <div>
+      <h2 id="welcome-msg">Welcome back! 👋</h2>
+      <p>Buy, sell & exchange with fellow REC students -- textbooks, gadgets, cycles & more.</p>
+    </div>
+    <a href="sell.html" class="btn btn-primary">➕ Sell an Item</a>
+  </div>
+
+  <div class="toolbar">
+    <input type="text" id="search-input" placeholder="🔍 Search for textbooks, calculators, cycles...">
+    <select id="category-filter">
+      <option value="all">All Categories</option>
+      <option value="Textbooks">Textbooks</option>
+      <option value="Stationery">Stationery</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Vehicles">Vehicles</option>
+      <option value="Hostel Essentials">Hostel Essentials</option>
+      <option value="Sports">Sports</option>
+      <option value="Others">Others</option>
+    </select>
+    <select id="sort-filter">
+      <option value="newest">Newest First</option>
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+    </select>
+  </div>
+
+  <div class="grid" id="product-grid"></div>
+
+  <div class="empty-state" id="empty-state" style="display:none;">
+    <div class="emoji">🛍️</div>
+    <h3>No items found</h3>
+    <p>Try a different search or category.</p>
+  </div>
+
+</main>
+
+<footer>CampusCart &middot; Built by students, for students of Raghu Engineering College</footer>
+
+<script src="js/data.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

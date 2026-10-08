@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusCart | Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <img src="assets/rec-logo.jpeg" alt="Raghu Engineering College logo">
+      <h1>CampusCart</h1>
+      <p>The student-to-student marketplace of<br><strong>Raghu Engineering College</strong></p>
+    </div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label for="rollNo">Roll Number</label>
+        <input type="text" id="rollNo" placeholder="e.g. 20951A0501" required>
+      </div>
+      <div class="form-group">
+        <label for="email">College Email</label>
+        <input type="email" id="email" placeholder="rollno@raghuenggcollege.in" required>
+        <div class="hint">Only @raghuenggcollege.in emails can access CampusCart</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <div class="error-text" id="login-error"></div>
+      <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+
+    <div class="auth-switch">
+      New to CampusCart? <a href="signup.html">Create an account</a>
+    </div>
+
+    <div class="demo-box">
+      🎓 Try it instantly with the demo account:<br>
+      Roll No: <strong>20951A0501</strong> · Email: <strong>20951a0501@raghuenggcollege.in</strong> · Password: <strong>demo123</strong>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

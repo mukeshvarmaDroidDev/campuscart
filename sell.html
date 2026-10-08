@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusCart | Sell an Item</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="home.html" class="brand">
+      <img src="assets/rec-logo.jpeg" alt="REC logo">
+      <div>CampusCart<small>RAGHU ENGINEERING COLLEGE</small></div>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="home.html">🏠 Home</a>
+      <a href="sell.html" class="active">➕ Sell an Item</a>
+      <a href="wishlist.html">❤️ Wishlist <span class="badge-count" id="wish-count">0</span></a>
+      <a href="cart.html">🛒 Cart <span class="badge-count" id="cart-count">0</span></a>
+      <a href="account.html">👤 <span id="nav-username">Account</span></a>
+      <button onclick="logout()">🚪 Logout</button>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="page-head">
+    <h1>➕ List an Item for Sale</h1>
+    <p>Fill in the details below so other REC students can find your item.</p>
+  </div>
+
+  <form class="sell-form" id="sell-form">
+    <div class="form-group">
+      <label for="name">Item Name</label>
+      <input type="text" id="name" placeholder="e.g. Engineering Physics Textbook" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" rows="3" placeholder="Condition, why you're selling, anything a buyer should know..." required></textarea>
+    </div>
+
+    <div class="two-col">
+      <div class="form-group">
+        <label for="price">Price (₹)</label>
+        <input type="number" id="price" min="1" placeholder="e.g. 300" required>
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">Select category</option>
+          <option>Textbooks</option>
+          <option>Stationery</option>
+          <option>Electronics</option>
+          <option>Vehicles</option>
+          <option>Hostel Essentials</option>
+          <option>Sports</option>
+          <option>Others</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="image">Item Photo</label>
+      <input type="file" id="image" accept="image/*">
+      <div class="image-preview" id="image-preview">No image selected</div>
+    </div>
+
+    <div class="form-group">
+      <label>Availability</label>
+      <div class="radio-row">
+        <label><input type="radio" name="avail" value="now" checked> Available right now</label>
+        <label><input type="radio" name="avail" value="later"> Heads-up (available in a few days)</label>
+      </div>
+
+      <div class="days-box" id="days-box">
+        <label for="days">Available in how many days?</label>
+        <input type="number" id="days" min="1" max="10" placeholder="1 to 10 days">
+        <div class="form-group" style="margin-top:10px;">
+          <label for="headsup">Heads-up note for buyers</label>
+          <textarea id="headsup" rows="2" placeholder="e.g. Still using it for my exams, will hand over right after!"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="error-text" id="sell-error"></div>
+    <button type="submit" class="btn btn-primary btn-block">List Item on CampusCart</button>
+  </form>
+</main>
+
+<footer>CampusCart &middot; Built by students, for students of Raghu Engineering College</footer>
+
+<script src="js/data.js"></script>
+<script src="js/sell.js"></script>
+</body>
+</html>
